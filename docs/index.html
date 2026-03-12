@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafeBeat — Privacy Policy & Terms</title>
+  <style>
+    :root {
+      --bg:      #0B1320;
+      --surface: #111D2E;
+      --border:  #1E2E3F;
+      --green:   #2DD4A0;
+      --text:    #DCE9F5;
+      --sub:     #5A7A96;
+      --faint:   #2A3D52;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .brand { font-size: 20px; font-weight: 800; letter-spacing: -0.4px; }
+    .brand span { color: var(--green); }
+
+    nav {
+      margin-left: auto;
+      display: flex;
+      gap: 8px;
+    }
+
+    nav button {
+      background: transparent;
+      border: 1.5px solid var(--border);
+      color: var(--sub);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    nav button.active {
+      background: var(--green);
+      border-color: var(--green);
+      color: #051810;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .doc { display: none; }
+    .doc.active { display: block; }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: -0.6px;
+      margin-bottom: 6px;
+    }
+
+    .updated {
+      font-size: 13px;
+      color: var(--sub);
+      margin-bottom: 28px;
+    }
+
+    .intro {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      font-size: 14px;
+      color: var(--sub);
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+
+    .section { margin-bottom: 36px; }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 10px;
+      letter-spacing: -0.2px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    p { color: var(--sub); margin-bottom: 12px; font-size: 15px; }
+
+    ul {
+      list-style: none;
+      margin: 8px 0 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    ul li {
+      color: var(--sub);
+      font-size: 15px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    a { color: var(--green); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .highlight {
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      color: var(--faint);
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 26px; }
+      .brand { font-size: 17px; }
+      nav button { padding: 5px 12px; font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><img src="./icon.png" alt="SafeBeat" /></div>
+  <div class="brand">Safe<span>Beat</span></div>
+  <nav>
+    <button class="active" onclick="show('privacy', this)">Privacy Policy</button>
+    <button onclick="show('terms', this)">Terms of Service</button>
+  </nav>
+</header>
+
+<div class="container">
+
+  <!-- PRIVACY POLICY -->
+  <div id="privacy" class="doc active">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: March 2026</p>
+    <div class="intro">
+      SafeBeat ("we", "us", or "our") is committed to protecting your privacy. This policy explains what information we collect, how we use it, and your rights as a user.
+    </div>
+
+    <div class="section">
+      <h2>1. Information We Collect</h2>
+      <p>SafeBeat collects only what is necessary to provide the service:</p>
+      <ul>
+        <li><span class="highlight">Phone number</span> — used for authentication and to identify you to your contacts.</li>
+        <li><span class="highlight">Safety status</span> — whether you have marked yourself as Safe or Need Help.</li>
+        <li><span class="highlight">Location data</span> — neighbourhood-level location captured only when you tap the status button. Never tracked in the background.</li>
+        <li><span class="highlight">Display name</span> — optional. Only collected if you choose to add it in your profile.</li>
+        <li><span class="highlight">Push token</span> — used to send safety notifications when a contact's status changes.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>2. How We Use Your Information</h2>
+      <p>Your information is used solely to operate SafeBeat:</p>
+      <ul>
+        <li>Your phone number creates your account and matches you with contacts.</li>
+        <li>Your safety status and neighbourhood location are shared only with contacts who have your number saved and are registered SafeBeat users.</li>
+        <li>Push tokens are used exclusively to send safety-related notifications.</li>
+      </ul>
+      <p>We do not use your data for advertising, analytics sold to third parties, or any purpose beyond operating the app.</p>
+    </div>
+
+    <div class="section">
+      <h2>3. Data Sharing</h2>
+      <p>We do not sell, rent, or trade your personal information.</p>
+      <p>Your safety status and neighbourhood-level location are visible only to contacts who have your phone number saved on their device and are registered SafeBeat users.</p>
+      <p>We use Firebase (Google) to store your data securely. <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase's privacy policy</a> applies to infrastructure-level data handling.</p>
+    </div>
+
+    <div class="section">
+      <h2>4. Location Data</h2>
+      <p>SafeBeat accesses your location only when you actively tap the status button. Location is never tracked in the background.</p>
+      <p>We store neighbourhood-level precision only (e.g. "North York, Toronto") — not your street address or exact GPS coordinates.</p>
+      <p>You may use SafeBeat without sharing your location. You will be prompted for location permission on first use and can deny it at any time in your device settings.</p>
+    </div>
+
+    <div class="section">
+      <h2>5. Data Retention & Deletion</h2>
+      <p>Your data is retained as long as your account exists.</p>
+      <p>You may delete your account at any time from the Profile tab. Deletion permanently removes your phone number, safety status, location, and push token from our systems immediately.</p>
+      <p>Residual data in Firebase backups may persist for up to 30 days after deletion.</p>
+    </div>
+
+    <div class="section">
+      <h2>6. Security</h2>
+      <p>Your data is stored in Google Firebase with industry-standard security. Access is restricted by Firestore security rules so only authenticated users can read relevant data.</p>
+      <p>We do not store passwords. Authentication is handled via one-time SMS codes through Firebase Phone Auth.</p>
+    </div>
+
+    <div class="section">
+      <h2>7. Children's Privacy</h2>
+      <p>SafeBeat is not intended for use by children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided us with their information, please contact us to have it removed.</p>
+    </div>
+
+    <div class="section">
+      <h2>8. Contact Us</h2>
+      <p>If you have questions about this privacy policy or your data, please contact us at: <a href="mailto:ritesh.shuffle@gmail.com">ritesh.shuffle@gmail.com</a></p>
+    </div>
+  </div>
+
+  <!-- TERMS OF SERVICE -->
+  <div id="terms" class="doc">
+    <h1>Terms of Service</h1>
+    <p class="updated">Last updated: March 2026</p>
+
+    <div class="section">
+      <h2>1. Acceptance of Terms</h2>
+      <p>By creating an account and using SafeBeat, you agree to these Terms of Service. If you do not agree, please do not use the app.</p>
+    </div>
+
+    <div class="section">
+      <h2>2. Description of Service</h2>
+      <p>SafeBeat is a personal safety check-in application that allows users to share their safety status with trusted contacts. The app is intended for personal, non-commercial use.</p>
+    </div>
+
+    <div class="section">
+      <h2>3. User Responsibilities</h2>
+      <p>You agree to:</p>
+      <ul>
+        <li>Provide accurate information when creating your account.</li>
+        <li>Use SafeBeat only for lawful purposes.</li>
+        <li>Not impersonate other users or share false safety information.</li>
+        <li>Not attempt to reverse-engineer, hack, or disrupt the service.</li>
+        <li>Keep your phone number secure and notify us if you believe your account has been compromised.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>4. Emergency Situations</h2>
+      <p>SafeBeat is not a substitute for emergency services. If you or someone else is in immediate danger, call 911 or your local emergency number.</p>
+      <p>SafeBeat makes no guarantees about notification delivery times or service availability. Do not rely solely on SafeBeat in emergency situations.</p>
+    </div>
+
+    <div class="section">
+      <h2>5. Disclaimers</h2>
+      <p>SafeBeat is provided "as is" without warranties of any kind. We do not guarantee uninterrupted service, and we are not liable for any harm resulting from failure to receive a notification or status update.</p>
+    </div>
+
+    <div class="section">
+      <h2>6. Termination</h2>
+      <p>We reserve the right to suspend or terminate accounts that violate these terms. You may delete your account at any time from the Profile screen in the app.</p>
+    </div>
+
+    <div class="section">
+      <h2>7. Changes to Terms</h2>
+      <p>We may update these terms from time to time. Continued use of the app after changes constitutes acceptance of the updated terms. We will notify users of significant changes via push notification where possible.</p>
+    </div>
+
+    <div class="section">
+      <h2>8. Governing Law</h2>
+      <p>These terms are governed by the laws of the Province of Ontario, Canada.</p>
+    </div>
+
+    <div class="section">
+      <h2>9. Contact Us</h2>
+      <p>For questions about these terms, contact us at: <a href="mailto:ritesh.shuffle@gmail.com">ritesh.shuffle@gmail.com</a></p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 SafeBeat. All rights reserved.
+</footer>
+
+<script>
+  function show(tab, btn) {
+    document.querySelectorAll('.doc').forEach(d => d.classList.remove('active'));
+    document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+    document.getElementById(tab).classList.add('active');
+    btn.classList.add('active');
+  }
+</script>
+
+</body>
+</html>
